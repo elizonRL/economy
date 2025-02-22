@@ -1,4 +1,4 @@
-
+// Code for the main application
 import express from 'express'
 import economyRouter from './router/economy.router'
 

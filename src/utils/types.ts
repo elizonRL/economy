@@ -1,10 +1,10 @@
 export interface Economy {
+  id: number
   income: number
   month: string
-  bills: bill[]
-
+  bills: Bill[]
 }
-interface bill {
+export interface Bill {
   billName: string
   billAmount: number
 }
