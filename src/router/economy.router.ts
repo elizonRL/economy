@@ -1,12 +1,11 @@
 
 import express from 'express'
 import economySevice from '../services/economy.sevice'
+import { getMethodAllEconomy } from '../Controller/economy.comtroller'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  res.send(economySevice.getEconomy())
-})
+router.get('/', getMethodAllEconomy)
 
 router.post('/', (req, res) => {
   const { income, month, bills } = req.body
