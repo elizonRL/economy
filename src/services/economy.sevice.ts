@@ -31,6 +31,7 @@ const addEconomy = (income: number, month: string, bills: Bill[]): Economy => {
     month,
     bills
   }
+  economy.push(newEconomy)
   return newEconomy
 }
 /* const addBill = (billName: string, billAmount: number, id: number): Bill => {

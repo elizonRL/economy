@@ -9,7 +9,9 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  res.send('POST request to the homepage')
+  const { income, month, bills } = req.body
+  const newEconomy = economySevice.addEconomy(income, month, bills)
+  res.send(newEconomy)
 })
 
 export default router
