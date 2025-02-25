@@ -1,8 +1,10 @@
 import app from './src/app'
 import 'dotenv/config'
+import { info } from './src/utils/logger'
+import config from './src/utils/config'
 
-const port = process.env.PORT ?? 3000
+const port = config.PORT
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`)
+  info(`Server is running on port ${port}`)
 })
